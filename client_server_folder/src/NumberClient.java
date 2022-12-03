@@ -5,6 +5,7 @@ public class NumberClient {
 
     public static void main(String args[]){
         try {
+            System.out.println("=== Number Client ===\n\n");
             int RMIPort;
             String hostName;
             InputStreamReader is = new InputStreamReader(System.in);
@@ -21,6 +22,9 @@ public class NumberClient {
 
             String message = h.getSquare(5);
             System.out.println("NumberClient: " + message);
+
+            String message2 = h.getFactorial(5);
+            System.out.println("NumberClient: " + message2);
         }
         catch (Exception e){
             System.out.println("Exception in NumberClient: " + e);

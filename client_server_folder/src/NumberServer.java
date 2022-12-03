@@ -12,6 +12,7 @@ public class NumberServer {
         String portNum, registryURL;
 
         try {
+            System.out.println("=== Number Server ===\n\n");
             System.out.println("Enter the RMI registry port number:");
             portNum = (br.readLine()).trim();
             int RMIPortNum = Integer.parseInt(portNum);
@@ -42,7 +43,6 @@ public class NumberServer {
             System.out.println("RMI registry created at port " + RMIPortNum);
         }
     }
-
     private static void listRegistry(String registryURL) throws RemoteException, MalformedURLException {
         System.out.println("Registry " + registryURL + " contains: ");
         String [] names = Naming.list(registryURL);
